@@ -3,6 +3,7 @@
 ## Architecture du Projet
 
 Ce projet est un site portfolio pour acteur construit avec :
+
 - **Backend**: Node.js + Express
 - **Template Engine**: EJS
 - **Styling**: Tailwind CSS
@@ -37,7 +38,7 @@ brunosite/
 Ce fichier sert de **wrapper serverless** pour l'application Express :
 
 ```javascript
-const app = require('../server');
+const app = require("../server");
 
 // Vercel exporte la fonction comme handler
 module.exports = app;
@@ -51,17 +52,18 @@ module.exports = app;
 
 ```javascript
 // Démarrage serveur (seulement en local, pas sur Vercel)
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
     console.log(`📱 Environment: ${process.env.NODE_ENV || "development"}`);
   });
 }
 
-module.exports = app;  // IMPORTANT: Exporter l'app
+module.exports = app; // IMPORTANT: Exporter l'app
 ```
 
-**Pourquoi ?** 
+**Pourquoi ?**
+
 - Sur Vercel, `app.listen()` ne doit PAS être appelé
 - Vercel gère le serveur via sa propre infrastructure
 - L'export de `app` est crucial pour `api/index.js`
@@ -82,6 +84,7 @@ Configuration minimaliste avec **rewrites** :
 ```
 
 **Explication** :
+
 - Toutes les routes (`/(.*)`) sont redirigées vers `/api/index`
 - `/api/index` correspond à `api/index.js`
 - Cela permet à Express de gérer toutes les routes normalement
@@ -113,7 +116,8 @@ Configuration minimaliste avec **rewrites** :
 }
 ```
 
-**Pourquoi ?** 
+**Pourquoi ?**
+
 - `vercel-build` est automatiquement exécuté par Vercel avant le déploiement
 - Compile le CSS Tailwind en production
 - Tailwind DOIT être dans `dependencies` (pas `devDependencies`) sinon Vercel ne l'installe pas
@@ -123,6 +127,7 @@ Configuration minimaliste avec **rewrites** :
 ### Déploiement Automatique (Recommandé)
 
 1. Pusher sur GitHub :
+
    ```bash
    git add .
    git commit -m "Description"
@@ -142,6 +147,7 @@ vercel --prod
 ### ❌ NE PAS FAIRE
 
 1. **Ne pas mettre Tailwind dans devDependencies**
+
    ```json
    // ❌ MAUVAIS
    "devDependencies": {
@@ -150,6 +156,7 @@ vercel --prod
    ```
 
 2. **Ne pas utiliser l'ancien format vercel.json avec `builds`**
+
    ```json
    // ❌ OBSOLÈTE
    {
@@ -163,6 +170,7 @@ vercel --prod
    ```
 
 3. **Ne pas appeler app.listen() en production**
+
    ```javascript
    // ❌ MAUVAIS
    app.listen(PORT, () => { ... });
@@ -179,6 +187,7 @@ vercel --prod
 ### ✅ FAIRE
 
 1. **Tailwind dans dependencies**
+
    ```json
    "dependencies": {
      "tailwindcss": "^3.4.1",
@@ -188,6 +197,7 @@ vercel --prod
    ```
 
 2. **Vercel.json minimaliste avec rewrites**
+
    ```json
    {
      "rewrites": [
@@ -200,6 +210,7 @@ vercel --prod
    ```
 
 3. **Condition sur app.listen()**
+
    ```javascript
    if (process.env.NODE_ENV !== 'production') {
      app.listen(PORT, () => { ... });
@@ -217,6 +228,7 @@ vercel --prod
 ### Erreur 404 sur toutes les routes
 
 **Vérifier** :
+
 1. Le fichier `api/index.js` existe et exporte `app`
 2. `vercel.json` a le rewrite vers `/api/index`
 3. `server.js` exporte `module.exports = app`
@@ -225,6 +237,7 @@ vercel --prod
 ### CSS non chargé
 
 **Vérifier** :
+
 1. `vercel-build` script existe dans `package.json`
 2. Tailwind est dans `dependencies` (pas `devDependencies`)
 3. Le fichier `public/css/styles.css` est commité OU généré au build
@@ -232,6 +245,7 @@ vercel --prod
 ### Erreur "Cannot find module"
 
 **Vérifier** :
+
 1. Tous les dossiers nécessaires sont commités (views, locales, data, public)
 2. Les chemins dans `require()` sont corrects (relatifs ou absolus)
 3. `.gitignore` ne bloque pas des fichiers importants
@@ -269,23 +283,27 @@ Si vous avez besoin de variables d'environnement :
 ## Architecture Serverless Expliquée
 
 **Traditionnel (serveur toujours actif)** :
+
 ```
 Requête → Port 3000 → Express App → Réponse
 ```
 
 **Vercel Serverless** :
+
 ```
 Requête → Vercel Edge → /api/index function → Express App → Réponse
                        (démarre à la demande)
 ```
 
 **Avantages** :
+
 - Scaling automatique
 - Pas de gestion de serveur
 - Gratuit jusqu'à un certain usage
 - CDN global intégré
 
 **Limitations** :
+
 - Cold start (première requête peut être lente)
 - Timeout de 10s (plan gratuit)
 - Pas de WebSockets persistants

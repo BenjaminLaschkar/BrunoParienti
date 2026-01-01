@@ -37,9 +37,59 @@
       </button>
     </div>
 
-    <!-- Gallery Grid -->
+    <!-- Gallery Grid (Desktop) & Carousel (Mobile) -->
+    <!-- Mobile Carousel -->
+    <div class="md:hidden relative mb-8" id="mobile-carousel">
+      <div class="overflow-hidden rounded-lg">
+        <div class="flex transition-transform duration-300 ease-out" id="carousel-track">
+          <% photos.forEach((photo) => { %>
+          <div
+            class="gallery-item carousel-slide min-w-full px-2"
+            data-category="<%= photo.category %>"
+            data-photo-id="<%= photo.id %>"
+          >
+            <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+              <div class="w-full aspect-[3/4] bg-gray-100 dark:bg-gray-900 flex items-center justify-center relative">
+                <img
+                  src="<%= photo.thumbnail %>"
+                  alt="<%= photo.alt %>"
+                  class="w-full h-full object-contain absolute inset-0 p-1"
+                  loading="lazy"
+                  width="<%= photo.width %>"
+                  height="<%= photo.height %>"
+                />
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+      
+      <!-- Carousel Controls -->
+      <button
+        id="carousel-prev"
+        class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-10"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        id="carousel-next"
+        class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-10"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      
+      <!-- Carousel Dots -->
+      <div class="flex justify-center gap-2 mt-4" id="carousel-dots"></div>
+    </div>
+
+    <!-- Desktop Grid -->
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+      class="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
       id="gallery-grid"
     >
       <% photos.forEach((photo) => { %>

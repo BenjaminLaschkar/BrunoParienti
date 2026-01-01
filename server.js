@@ -123,7 +123,7 @@ app.use((err, req, res, next) => {
 });
 
 // Démarrage serveur (seulement en local, pas sur Vercel)
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
     console.log(`📱 Environment: ${process.env.NODE_ENV || "development"}`);

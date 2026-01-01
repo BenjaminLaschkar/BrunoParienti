@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeaderScroll();
   initGalleryFilters();
   initLightbox();
+  initMobileCarousel();
   initCookieBanner();
   initContactForm();
 });
@@ -397,6 +398,172 @@ function initContactForm() {
     setTimeout(() => {
       formMessage.classList.add("hidden");
     }, 5000);
+  }
+}
+
+// =======================
+// Mobile Carousel for Gallery
+// =======================
+function initMobileCarousel() {
+  const carousel = document.getElementById("mobile-carousel");
+  if (!carousel) return;
+
+  const track = document.getElementById("carousel-track");
+  const prevBtn = document.getElementById("carousel-prev");
+  const nextBtn = document.getElementById("carousel-next");
+  const dotsContainer = document.getElementById("carousel-dots");
+  
+  if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+
+  const slides = Array.from(track.querySelectorAll(".carousel-slide"));
+  let currentIndex = 0;
+  let filteredSlides = [...slides];
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  // Create dots based on filtered slides
+  function createDots() {
+    dotsContainer.innerHTML = "";
+    filteredSlides.forEach((_, index) => {
+      const dot = document.createElement("button");
+      dot.className = `w-2 h-2 rounded-full transition-all ${
+        index === currentIndex ? "bg-accent w-8" : "bg-gray-400"
+      }`;
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  // Update carousel position
+  function updateCarousel() {
+    const offset = -currentIndex * 100;
+    
+    // Hide all slides first
+    slides.forEach(slide => {
+      slide.style.display = "none";
+    });
+    
+    // Show only filtered slides
+    filteredSlides.forEach((slide, index) => {
+      slide.style.display = "block";
+      slide.style.order = index;
+    });
+    
+    track.style.transform = `translateX(${offset}%)`;
+    updateDots();
+  }
+
+  // Update dots
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll("button");
+    dots.forEach((dot, index) => {
+      dot.className = `w-2 h-2 rounded-full transition-all ${
+        index === currentIndex ? "bg-accent w-8" : "bg-gray-400"
+      }`;
+    });
+  }
+
+  // Go to specific slide
+  function goToSlide(index) {
+    currentIndex = Math.max(0, Math.min(index, filteredSlides.length - 1));
+    updateCarousel();
+  }
+
+  // Next slide
+  function nextSlide() {
+    if (currentIndex < filteredSlides.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  }
+
+  // Previous slide
+  function prevSlide() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  }
+
+  // Touch events for swipe
+  track.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  track.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    if (touchEndX < touchStartX - 50) {
+      nextSlide(); // Swipe left
+    }
+    if (touchEndX > touchStartX + 50) {
+      prevSlide(); // Swipe right
+    }
+  }
+
+  // Button events
+  prevBtn.addEventListener("click", prevSlide);
+  nextBtn.addEventListener("click", nextSlide);
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (carousel.classList.contains("md:hidden")) {
+      if (e.key === "ArrowLeft") prevSlide();
+      if (e.key === "ArrowRight") nextSlide();
+    }
+  });
+
+  // Filter integration
+  const filterButtons = document.querySelectorAll(".gallery-filter");
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+      
+      if (filter === "all") {
+        filteredSlides = [...slides];
+      } else {
+        filteredSlides = slides.filter(
+          (slide) => slide.dataset.category === filter
+        );
+      }
+      
+      currentIndex = 0;
+      createDots();
+      updateCarousel();
+    });
+  });
+
+  // Click on slide to open lightbox
+  slides.forEach((slide) => {
+    slide.addEventListener("click", () => {
+      const photoId = slide.dataset.photoId;
+      if (photoId) {
+        // Trigger click on corresponding desktop gallery item to use existing lightbox logic
+        const desktopItem = document.querySelector(`#gallery-grid .gallery-item[data-photo-id="${photoId}"]`);
+        if (desktopItem) {
+          desktopItem.click();
+        }
+      }
+    });
+  });
+
+  // Initialize
+  createDots();
+  updateCarousel();
+}
+
+// Helper function to open lightbox (already exists but making sure it's accessible)
+function openLightbox(imageSrc) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+  
+  if (lightbox && lightboxImage) {
+    lightboxImage.src = imageSrc;
+    lightbox.classList.remove("hidden");
+    lightbox.classList.add("flex");
   }
 }
 
