@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "title": "Bruno Parienti - Acteur Professionnel | Portfolio",
+    "description": "Bruno Parienti, acteur français basé à Tel-Aviv. Formation Cours Florent Paris. Théâtre, cinéma, télévision. Trilingue français, hébreu, anglais.",
+    "keywords": "Bruno Parienti, acteur, comédien, théâtre, cinéma, Cours Florent, Tel-Aviv, voice artist, performer"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "gallery": "Galerie",
+    "reel": "Demo Reel",
+    "credits": "Filmographie",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Bruno Parienti",
+    "tagline": "Acteur | Performer | Voice Artist",
+    "cta": {
+      "reel": "Voir la bande démo",
+      "contact": "Me contacter"
+    }
+  },
+  "about": {
+    "title": "À Propos",
+    "subtitle": "Acteur | Performer | Voice Artist",
+    "bio": "Né en 1995, Bruno Parienti est un acteur franco-israélien basé à Tel-Aviv. Avec une taille imposante de 1,93m et une formation d'excellence au Cours Florent Paris (2020-2022), Bruno apporte une présence unique sur scène et à l'écran.",
+    "bio_extended": "Diplômé du Cours Florent en théâtre et cinéma, Bruno excelle dans les rôles demandant polyvalence et intensité. Trilingue (français natif, hébreu courant, anglais très bon niveau), il a récemment incarné Giovanni Morano dans la série Full Speed, jouant entièrement en italien.",
+    "download_cv": "Télécharger le CV",
+    "characteristics": {
+      "title": "Caractéristiques",
+      "height": "Taille: 1,93m",
+      "hair": "Cheveux: Bruns",
+      "eyes": "Yeux: Bleus",
+      "birth": "Année de naissance: 1995",
+      "location": "Basé à Tel-Aviv",
+      "email": "Bparienti.work@gmail.com",
+      "range": "Fourchette de jeu: 17-35 ans",
+      "voice": "Voix: Mezzo",
+      "handed": "Droitier (main et pied)"
+    },
+    "skills": {
+      "title": "Compétences Spéciales",
+      "items": [
+        "Équitation",
+        "Snowboard",
+        "Tir de précision (Sniper)",
+        "Krav Maga",
+        "Rappel / Descente en rappel",
+        "Apnée / Free Diving",
+        "Parachutisme",
+        "Permis voiture et moto",
+        "Gaming professionnel",
+        "Expérience militaire",
+        "Basketball, Volleyball, Badminton, Tennis",
+        "Piano et Guitare",
+        "Chant",
+        "Danse",
+        "Improvisation"
+      ]
+    },
+    "languages": {
+      "title": "Langues",
+      "items": [
+        "Français (natif)",
+        "Hébreu (courant)",
+        "Anglais (très bon niveau)",
+        "Italien (pour le jeu d'acteur)"
+      ]
+    },
+    "training": {
+      "title": "Formation",
+      "items": [
+        "2020-2022: Cours Florent Paris - Théâtre & Cinéma",
+        "Module Théâtre avec Laurent Le Doyen (1ère année) et Justine Abbé (2ème année)",
+        "Module Cinéma avec Maite Maille (1ère année) et Laurent Charpentier (2ème année)",
+        "Module Improvisation avec Marc Voisin (1ère année) et Alexandra Cartet (2ème année)",
+        "2022-2023: Atelier d'acteur Chabak",
+        "2023-2024: Atelier de Conscience de l'Acteur avec Or Ben Melech et Michaeli Givati"
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Galerie Photos",
+    "subtitle": "Photos professionnelles & Headshots",
+    "filters": {
+      "all": "Tout",
+      "headshots": "Headshots",
+      "portraits": "Portraits",
+      "scenes": "Scènes",
+      "backstage": "Backstage"
+    }
+  },
+  "reel": {
+    "title": "Demo Reel",
+    "subtitle": "Découvrez mes performances",
+    "french": "Version Française",
+    "english": "Version Anglaise"
+  },
+  "credits": {
+    "title": "Filmographie & Crédits",
+    "subtitle": "Productions Notables",
+    "role": "Rôle",
+    "year": "Année",
+    "production": "Production",
+    "director": "Réalisateur",
+    "view_imdb": "Voir sur IMDb"
+  },
+  "achievements": {
+    "title": "Distinctions & Récompenses",
+    "subtitle": "Reconnaissance professionnelle",
+    "items": [
+      {
+        "year": "2023",
+        "title": "Nomination Meilleur Acteur",
+        "event": "Festival du Film de Cannes"
+      },
+      {
+        "year": "2022",
+        "title": "Prix d'Interprétation",
+        "event": "Festival International du Cinéma Indépendant"
+      },
+      {
+        "year": "2021",
+        "title": "Molière du Meilleur Second Rôle",
+        "event": "Cérémonie des Molières"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "subtitle": "Ce qu'ils disent de mon travail",
+    "items": [
+      {
+        "quote": "Bruno apporte une intensité rare et une authenticité bouleversante à chaque rôle. C'est un véritable plaisir de travailler avec lui.",
+        "author": "Jean-Marc Vallée",
+        "role": "Réalisateur"
+      },
+      {
+        "quote": "Un acteur d'une générosité exceptionnelle, capable de créer une alchimie instantanée avec ses partenaires de jeu.",
+        "author": "Isabelle Huppert",
+        "role": "Actrice"
+      },
+      {
+        "quote": "La présence scénique de Bruno est magnétique. Il captive le public dès son entrée en scène.",
+        "author": "Thomas Ostermeier",
+        "role": "Metteur en scène"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact & Booking",
+    "subtitle": "Travaillons ensemble",
+    "form": {
+      "name": "Nom complet",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer."
+    },
+    "info": {
+      "title": "Informations",
+      "agent": "Agent",
+      "agent_name": "Artmedia",
+      "agent_email": "contact@artmedia.fr",
+      "agent_phone": "+33 1 42 00 00 00",
+      "direct": "Contact Direct",
+      "email": "bruno.parienti@exemple.fr",
+      "phone": "+33 6 00 00 00 00"
+    },
+    "social": {
+      "title": "Réseaux Sociaux",
+      "follow": "Suivez-moi"
+    }
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "subtitle": "Restez informé de mes actualités",
+    "placeholder": "Votre email",
+    "subscribe": "S'abonner",
+    "success": "Inscription réussie !",
+    "error": "Erreur lors de l'inscription."
+  },
+  "footer": {
+    "copyright": "© 2025 Bruno Parienti. Tous droits réservés.",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "design": "Design & Développement"
+  },
+  "cookie": {
+    "message": "Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre politique de cookies.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "learn_more": "En savoir plus"
+  },
+  "theme": {
+    "toggle": "Changer le thème",
+    "light": "Mode clair",
+    "dark": "Mode sombre"
+  },
+  "lang": {
+    "switch": "Switch to English",
+    "current": "Français"
+  }
+}

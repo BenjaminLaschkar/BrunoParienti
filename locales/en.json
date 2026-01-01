@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "title": "Bruno Parienti - Professional Actor | Portfolio",
+    "description": "Professional portfolio of Bruno Parienti, actor, performer and voice artist. Discover his filmography, photos and demo reels.",
+    "keywords": "Bruno Parienti, actor, performer, theatre, cinema, voice artist, France"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "gallery": "Gallery",
+    "reel": "Demo Reel",
+    "credits": "Filmography",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Bruno Parienti",
+    "tagline": "Actor | Performer | Voice Artist",
+    "cta": {
+      "reel": "View Demo Reel",
+      "contact": "Get in Touch"
+    }
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Actor | Performer | Voice Artist",
+    "bio": "Born in 1995, Bruno Parienti is a Franco-Israeli actor based in Tel-Aviv. Standing at an impressive 1.93m and trained at the prestigious Cours Florent Paris (2020-2022), Bruno brings a unique presence on stage and screen.",
+    "bio_extended": "Graduate of Cours Florent in theatre and cinema, Bruno excels in roles requiring versatility and intensity. Trilingual (native French, fluent Hebrew, very good English), he recently played Giovanni Morano in the Full Speed series, performing entirely in Italian.",
+    "download_cv": "Download Resume",
+    "characteristics": {
+      "title": "Characteristics",
+      "height": "Height: 1.93m (6'4\")",
+      "hair": "Hair: Brown",
+      "eyes": "Eyes: Blue",
+      "birth": "Birth Year: 1995",
+      "location": "Based in Tel-Aviv",
+      "email": "Bparienti.work@gmail.com",
+      "range": "Playing range: 17-35 years",
+      "voice": "Voice: Mezzo",
+      "handed": "Right handed | Right Footed"
+    },
+    "skills": {
+      "title": "Special Skills",
+      "items": [
+        "Horse Riding",
+        "Snowboarding",
+        "Sniper / Precision Shooting",
+        "Krav Maga",
+        "Abseiling / Rappelling",
+        "Free Diving",
+        "Sky Diving",
+        "Car & Motorcycle Driver",
+        "Professional Gamer",
+        "Military Experience",
+        "Basketball, Volleyball, Badminton, Tennis",
+        "Piano & Guitar",
+        "Singer",
+        "Dancer",
+        "Improvisation"
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "items": [
+        "French (native)",
+        "Hebrew (fluent)",
+        "English (very good)",
+        "Italian (acting)"
+      ]
+    },
+    "training": {
+      "title": "Training",
+      "items": [
+        "2020-2022: Cours Florent Paris - Theatre & Cinema",
+        "Theatre Module with Laurent Le Doyen (1st year) & Justine Abbé (2nd year)",
+        "Cinema Module with Maite Maille (1st year) & Laurent Charpentier (2nd year)",
+        "Improvisation Module with Marc Voisin (1st year) & Alexandra Cartet (2nd year)",
+        "2022-2023: Chabak Acting Workshop",
+        "2023-2024: Actor's Consciousness Workshop with Or Ben Melech and Michaeli Givati"
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Professional Photos & Headshots",
+    "filters": {
+      "all": "All",
+      "headshots": "Headshots",
+      "portraits": "Portraits",
+      "scenes": "Scenes",
+      "backstage": "Backstage"
+    }
+  },
+  "reel": {
+    "title": "Demo Reel",
+    "subtitle": "Discover my performances",
+    "french": "French Version",
+    "english": "English Version"
+  },
+  "credits": {
+    "title": "Filmography & Credits",
+    "subtitle": "Notable Productions",
+    "role": "Role",
+    "year": "Year",
+    "production": "Production",
+    "director": "Director",
+    "view_imdb": "View on IMDb"
+  },
+  "achievements": {
+    "title": "Awards & Recognition",
+    "subtitle": "Professional achievements",
+    "items": [
+      {
+        "year": "2023",
+        "title": "Best Actor Nomination",
+        "event": "Cannes Film Festival"
+      },
+      {
+        "year": "2022",
+        "title": "Best Performance Award",
+        "event": "International Independent Film Festival"
+      },
+      {
+        "year": "2021",
+        "title": "Best Supporting Actor Molière",
+        "event": "Molière Awards Ceremony"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What they say about my work",
+    "items": [
+      {
+        "quote": "Bruno brings a rare intensity and overwhelming authenticity to every role. It's a real pleasure to work with him.",
+        "author": "Jean-Marc Vallée",
+        "role": "Director"
+      },
+      {
+        "quote": "An actor of exceptional generosity, capable of creating instant chemistry with his scene partners.",
+        "author": "Isabelle Huppert",
+        "role": "Actress"
+      },
+      {
+        "quote": "Bruno's stage presence is magnetic. He captivates the audience from the moment he enters.",
+        "author": "Thomas Ostermeier",
+        "role": "Theatre Director"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact & Booking",
+    "subtitle": "Let's work together",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "info": {
+      "title": "Information",
+      "agent": "Agent",
+      "agent_name": "Artmedia",
+      "agent_email": "contact@artmedia.fr",
+      "agent_phone": "+33 1 42 00 00 00",
+      "direct": "Direct Contact",
+      "email": "bruno.parienti@example.com",
+      "phone": "+33 6 00 00 00 00"
+    },
+    "social": {
+      "title": "Social Media",
+      "follow": "Follow me"
+    }
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "subtitle": "Stay updated with my news",
+    "placeholder": "Your email",
+    "subscribe": "Subscribe",
+    "success": "Successfully subscribed!",
+    "error": "Subscription error."
+  },
+  "footer": {
+    "copyright": "© 2025 Bruno Parienti. All rights reserved.",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "design": "Design & Development"
+  },
+  "cookie": {
+    "message": "This site uses cookies to improve your experience. By continuing, you accept our cookie policy.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learn_more": "Learn more"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light mode",
+    "dark": "Dark mode"
+  },
+  "lang": {
+    "switch": "Passer en Français",
+    "current": "English"
+  }
+}

@@ -1,0 +1,219 @@
+<section id="gallery" class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">
+        <%= t('gallery.title') %>
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        <%= t('gallery.subtitle') %>
+      </p>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button
+        class="gallery-filter active px-6 py-2 rounded-full border-2 border-gray-300 dark:border-gray-700 hover:border-accent hover:text-accent transition-all"
+        data-filter="all"
+      >
+        <%= t('gallery.filters.all') %>
+      </button>
+      <button
+        class="gallery-filter px-6 py-2 rounded-full border-2 border-gray-300 dark:border-gray-700 hover:border-accent hover:text-accent transition-all"
+        data-filter="headshots"
+      >
+        <%= t('gallery.filters.headshots') %>
+      </button>
+      <button
+        class="gallery-filter px-6 py-2 rounded-full border-2 border-gray-300 dark:border-gray-700 hover:border-accent hover:text-accent transition-all"
+        data-filter="portraits"
+      >
+        <%= t('gallery.filters.portraits') %>
+      </button>
+      <button
+        class="gallery-filter px-6 py-2 rounded-full border-2 border-gray-300 dark:border-gray-700 hover:border-accent hover:text-accent transition-all"
+        data-filter="scenes"
+      >
+        <%= t('gallery.filters.scenes') %>
+      </button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+      id="gallery-grid"
+    >
+      <% photos.forEach((photo) => { %>
+      <div
+        class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer transition-transform hover:scale-105"
+        data-category="<%= photo.category %>"
+        data-photo-id="<%= photo.id %>"
+      >
+        <div
+          class="w-full aspect-[3/4] bg-gray-100 dark:bg-gray-900 flex items-center justify-center relative"
+        >
+          <img
+            src="<%= photo.thumbnail %>"
+            alt="<%= photo.alt %>"
+            class="w-full h-full object-contain absolute inset-0 p-1"
+            loading="lazy"
+            width="<%= photo.width %>"
+            height="<%= photo.height %>"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div
+            class="hidden absolute inset-0 flex-col items-center justify-center text-center p-4"
+          >
+            <svg
+              viewBox="0 0 200 250"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-48 h-60"
+              style="max-width: 200px; max-height: 250px"
+            >
+              <defs>
+                <linearGradient
+                  id="grad<%= photo.id %>"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #374151; stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #1f2937; stop-opacity: 1"
+                  />
+                </linearGradient>
+              </defs>
+              <rect width="200" height="250" fill="url(#grad<%= photo.id %>)" />
+              <circle cx="100" cy="90" r="30" fill="#d4af37" opacity="0.3" />
+              <path
+                d="M 100 70 Q 90 70 90 80 L 90 100 Q 90 110 100 110 Q 110 110 110 100 L 110 80 Q 110 70 100 70 Z"
+                fill="#d4af37"
+                opacity="0.4"
+              />
+              <circle cx="93" cy="83" r="4" fill="#4b5563" />
+              <circle cx="107" cy="83" r="4" fill="#4b5563" />
+              <path
+                d="M 93 95 Q 100 100 107 95"
+                stroke="#4b5563"
+                stroke-width="2"
+                fill="none"
+              />
+              <rect
+                x="30"
+                y="140"
+                width="140"
+                height="3"
+                fill="#d4af37"
+                opacity="0.5"
+                rx="1.5"
+              />
+              <rect
+                x="50"
+                y="155"
+                width="100"
+                height="2"
+                fill="#6b7280"
+                opacity="0.5"
+                rx="1"
+              />
+              <rect
+                x="60"
+                y="165"
+                width="80"
+                height="2"
+                fill="#6b7280"
+                opacity="0.5"
+                rx="1"
+              />
+              <text
+                x="100"
+                y="195"
+                text-anchor="middle"
+                font-family="sans-serif"
+                font-size="10"
+                fill="#9ca3af"
+              >
+                <%= photo.category %>
+              </text>
+              <text
+                x="100"
+                y="210"
+                text-anchor="middle"
+                font-family="sans-serif"
+                font-size="8"
+                fill="#6b7280"
+              >
+                Photo <%= photo.id %>
+              </text>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center"
+        >
+          <svg
+            class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+            />
+          </svg>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div
+  id="lightbox"
+  class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden items-center justify-center p-4"
+>
+  <button
+    id="lightbox-close"
+    class="absolute top-4 right-4 text-white text-4xl hover:text-accent transition-colors z-10"
+  >
+    &times;
+  </button>
+
+  <button
+    id="lightbox-prev"
+    class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-5xl hover:text-accent transition-colors z-10"
+  >
+    &#8249;
+  </button>
+
+  <button
+    id="lightbox-next"
+    class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-5xl hover:text-accent transition-colors z-10"
+  >
+    &#8250;
+  </button>
+
+  <div class="max-w-6xl max-h-full flex items-center justify-center">
+    <div class="relative">
+      <img
+        id="lightbox-image"
+        src=""
+        alt=""
+        class="max-w-full max-h-[90vh] object-contain"
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+  // Pass photos data to JavaScript
+  window.photosData = <%- JSON.stringify(photos) %>;
+</script>

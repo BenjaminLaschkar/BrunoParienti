@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "year": 2024,
+    "title": "דם על המים (Dam Al HaMaim)",
+    "type": "Film/Série",
+    "role": "Rôle Principal",
+    "director": "Ohav Givaty & Shani Sofer",
+    "production": "Production Israélienne",
+    "description": "Production israélienne - Rôle principal dans ce film dramatique",
+    "imdb": null,
+    "image": "/img/credits/dam-al-hamaim.jpg"
+  },
+  {
+    "id": 2,
+    "year": 2024,
+    "title": "מלא מהירות עונה 1 (Full Speed Season 1)",
+    "type": "Série TV",
+    "role": "Giovanni Morano",
+    "director": "Kobi Machat",
+    "production": "Télévision Israélienne",
+    "description": "Rôle en italien - Giovanni Morano dans cette série télévisée israélienne",
+    "imdb": null,
+    "image": "/img/credits/full-speed.jpg"
+  },
+  {
+    "id": 3,
+    "year": 2024,
+    "title": "Bank Hapoalim",
+    "type": "Publicité",
+    "role": "Acteur Principal",
+    "director": "Commercial Campaign",
+    "production": "Bank Hapoalim",
+    "description": "Campagne publicitaire pour Bank Hapoalim, l'une des plus grandes banques d'Israël",
+    "imdb": null,
+    "image": "/img/credits/bank-hapoalim.jpg"
+  },
+  {
+    "id": 4,
+    "year": 2023,
+    "title": "The Winter's Tale",
+    "type": "Théâtre",
+    "role": "Camilio Lord of Sicile & Leonte King of Sicile",
+    "director": "William Shakespeare",
+    "production": "Cours Florent, Paris",
+    "description": "Production théâtrale de la pièce de Shakespeare au prestigieux Cours Florent, Paris",
+    "imdb": null,
+    "image": "/img/credits/winters-tale.jpg"
+  },
+  {
+    "id": 5,
+    "year": 2022,
+    "title": "Trilogie de la villégiature",
+    "type": "Théâtre",
+    "role": "Leonardo & Yacinta",
+    "director": "Carlo Goldoni",
+    "production": "Cours Florent, Paris",
+    "description": "Jalousie - Production théâtrale de la comédie classique italienne de Goldoni",
+    "imdb": null,
+    "image": "/img/credits/villegiature.jpg"
+  },
+  {
+    "id": 6,
+    "year": 2022,
+    "title": "Cyrano de Bergerac",
+    "type": "Théâtre",
+    "role": "Cyrano (Monologue)",
+    "director": "Edmond Rostand",
+    "production": "Cours Florent, Paris",
+    "description": "Monologue de Cyrano décrivant son propre nez - Pièce emblématique du théâtre français",
+    "imdb": null,
+    "image": "/img/credits/cyrano.jpg"
+  },
+  {
+    "id": 7,
+    "year": 2022,
+    "title": "Andromaque",
+    "type": "Théâtre",
+    "role": "Pyrrhus & Andromaque",
+    "director": "Racine",
+    "production": "Cours Florent, Paris",
+    "description": "Scène 4 Acte 1 - Tragédie classique de Racine",
+    "imdb": null,
+    "image": "/img/credits/andromaque.jpg"
+  },
+  {
+    "id": 8,
+    "year": 2022,
+    "title": "Brasserie",
+    "type": "Théâtre",
+    "role": "Caporal & Capitaine",
+    "director": "Koffi Kwahulé",
+    "production": "Cours Florent, Paris",
+    "description": "Production théâtrale contemporaine - Pièce du dramaturge ivoirien Koffi Kwahulé",
+    "imdb": null,
+    "image": "/img/credits/brasserie.jpg"
+  }
+]

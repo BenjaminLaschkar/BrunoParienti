@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Bruno Parienti</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        font-family: "Inter", sans-serif;
+      }
+      .container-404 {
+        text-align: center;
+        color: white;
+        padding: 2rem;
+      }
+      .error-code {
+        font-size: 8rem;
+        font-weight: bold;
+        color: #d4af37;
+        margin: 0;
+        line-height: 1;
+      }
+      .error-message {
+        font-size: 1.5rem;
+        margin: 1rem 0 2rem;
+        color: #e5e5e5;
+      }
+      .home-link {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #d4af37;
+        color: #1a1a1a;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+      .home-link:hover {
+        background: #f0c14b;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-404">
+      <h1 class="error-code">404</h1>
+      <p class="error-message">Page not found / Page non trouvée</p>
+      <a href="/" class="home-link">← Return Home / Retour à l'accueil</a>
+    </div>
+  </body>
+</html>

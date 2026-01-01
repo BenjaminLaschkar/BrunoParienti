@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html
+  lang="<%= lang %>"
+  class="scroll-smooth"
+  dir="<%= lang === 'he' ? 'rtl' : 'ltr' %>"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title><%= title %></title>
+    <meta name="description" content="<%= metaDescription %>" />
+    <meta name="keywords" content="<%= t('meta.keywords') %>" />
+    <meta name="author" content="Bruno Parienti" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="<%= seoData.canonical %>" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= seoData.url %>" />
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:description" content="<%= metaDescription %>" />
+    <meta property="og:image" content="<%= seoData.image %>" />
+    <meta
+      property="og:locale"
+      content="<%= lang === 'fr' ? 'fr_FR' : lang === 'en' ? 'en_US' : 'he_IL' %>"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="<%= seoData.url %>" />
+    <meta property="twitter:title" content="<%= title %>" />
+    <meta property="twitter:description" content="<%= metaDescription %>" />
+    <meta property="twitter:image" content="<%= seoData.image %>" />
+
+    <!-- Alternate Languages -->
+    <link
+      rel="alternate"
+      hreflang="fr"
+      href="<%= seoData.canonical %>?lang=fr"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="<%= seoData.canonical %>?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="<%= seoData.canonical %>"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css?v=<%= Date.now() %>" />
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Bruno Parienti",
+        "jobTitle": "Actor, Performer, Voice Artist",
+        "url": "<%= seoData.canonical %>",
+        "image": "<%= seoData.image %>",
+        "sameAs": [
+          "https://www.imdb.com/name/nm1234567/",
+          "https://www.instagram.com/brunoparienti/",
+          "https://www.linkedin.com/in/brunoparienti/"
+        ],
+        "nationality": "French",
+        "knowsLanguage": ["French", "English", "Spanish"],
+        "description": "<%= metaDescription %>"
+      }
+    </script>
+  </head>
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <%- include('partials/header') %>
+
+    <main><%- include('index') %></main>
+
+    <%- include('partials/footer') %>
+
+    <!-- Cookie Banner -->
+    <div
+      id="cookie-banner"
+      class="fixed bottom-0 left-0 right-0 bg-gray-900 dark:bg-gray-800 text-white p-4 shadow-lg z-50 transform translate-y-full transition-transform duration-300"
+    >
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <p class="text-sm"><%= t('cookie.message') %></p>
+        <div class="flex gap-3">
+          <button
+            id="cookie-accept"
+            class="px-4 py-2 bg-accent text-gray-900 rounded hover:bg-yellow-500 transition-colors text-sm font-medium"
+          >
+            <%= t('cookie.accept') %>
+          </button>
+          <button
+            id="cookie-decline"
+            class="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm font-medium"
+          >
+            <%= t('cookie.decline') %>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=<%= Date.now() %>"></script>
+  </body>
+</html>
